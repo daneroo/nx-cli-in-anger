@@ -4,10 +4,6 @@ Note: *Starting over without Nx.*
 
 - *use something in anger*: (humorous) to do or use something in a real situation
 
-Note: **Giving up, this is too much work**
-
-This is a test repo for an [nx workspace](https://nx.dev/).
-
 Objectives:
 
 - A cli app
