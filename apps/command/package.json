@@ -11,6 +11,9 @@
     "cli": "./dist/main.js"
   },
   "scripts": {
+    "lint": "eslint .",
+    "test:watch": "vitest",
+    "test": "vitest run",
     "build": "pnpm tsc --build .",
     "start": "node dist/main.js",
     "pkg": "pnpm build && pnpm dlx pkg . -o bin/app -t node16-linux-x64,node16-macos-x64,node16-win-x64"
