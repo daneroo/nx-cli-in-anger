@@ -46,13 +46,11 @@ importers:
       '@root/walk': ^1.1.0
       '@types/yargs': ^17.0.13
       chalk: ^5.1.0
-      music-metadata: ^8.1.0
       yargs: ^17.6.0
     dependencies:
       '@pnpm-cli-in-anger/shared': link:../../packages/shared
       '@root/walk': 1.1.0
       chalk: 5.1.0
-      music-metadata: 8.1.0
       yargs: 17.6.0
     devDependencies:
       '@types/yargs': 17.0.13
