@@ -1,3 +1,5 @@
 node_modules/
 # this is not yet used, packages have their own dist folders
 dist/
+# coverage (which is global as per vitest being run from root
+coverage/

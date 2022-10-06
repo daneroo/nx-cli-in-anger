@@ -30,6 +30,7 @@ Objectives:
 - typescript
 - eslint
 - prettier
+- vitest (replaced jest and ts-jest)
 
 ### pnpm and top level directory
 

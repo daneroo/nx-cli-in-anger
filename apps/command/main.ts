@@ -1,9 +1,7 @@
 import yargs from 'yargs/yargs';
 
 import chalk from 'chalk';
-import { promises as fs } from 'node:fs';
-import { basename, dirname, resolve } from 'node:path';
-import { parseFile } from 'music-metadata';
+import { getSizeOfFile, getMeta } from '@pnpm-cli-in-anger/shared';
 
 const defaultFilePath = 'robert-frost-the-road-not-taken.mp3';
 
@@ -38,45 +36,46 @@ async function main(): Promise<void> {
   console.log(`About to examine file: ${file}`);
   // 2- use node:fs to read the file size
   const fileInfo = await getSizeOfFile(file);
-  console.log({ fileInfo });
   // 3- use music-metadata to get the metadata from an mp3 file
   const meta = await getMeta(file);
   // 4- chalk to color the output
   showWithColor({ fileInfo, meta });
 }
 
-// use node:fs to read the file size
-async function getSizeOfFile(
-  filepath: string
-): Promise<{ path: string; basename: string; dirname: string; size: number }> {
-  const stats = await fs.stat(filepath);
-  return {
-    path: filepath,
-    basename: basename(filepath),
-    dirname: dirname(resolve(filepath)),
-    size: stats.size,
-  };
-}
+// moved to shared
+// // use node:fs to read the file size
+// async function getSizeOfFile(
+//   filepath: string
+// ): Promise<{ path: string; basename: string; dirname: string; size: number }> {
+//   const stats = await fs.stat(filepath);
+//   return {
+//     path: filepath,
+//     basename: basename(filepath),
+//     dirname: dirname(resolve(filepath)),
+//     size: stats.size,
+//   };
+// }
 
-//  use music-metadata to get the metadata from an mp3 file
-async function getMeta(filePath: string): Promise<{
-  artist: string;
-  title: string;
-  album: string;
-  duration: number;
-  bitrate: number;
-}> {
-  const metadata = await parseFile(filePath);
-  const { artist, title, album } = metadata.common;
-  const { bitrate, duration } = metadata.format;
-  return {
-    artist: artist ?? 'unknown artist',
-    title: title ?? 'unknown title',
-    album: album ?? 'unknown album',
-    duration: duration ?? 0,
-    bitrate: bitrate ?? 0,
-  };
-}
+// moved to shared
+// // use music-metadata to get the metadata from an mp3 file
+// async function getMeta(filePath: string): Promise<{
+//   artist: string;
+//   title: string;
+//   album: string;
+//   duration: number;
+//   bitrate: number;
+// }> {
+//   const metadata = await parseFile(filePath);
+//   const { artist, title, album } = metadata.common;
+//   const { bitrate, duration } = metadata.format;
+//   return {
+//     artist: artist ?? 'unknown artist',
+//     title: title ?? 'unknown title',
+//     album: album ?? 'unknown album',
+//     duration: duration ?? 0,
+//     bitrate: bitrate ?? 0,
+//   };
+// }
 
 // chalk to color the output
 function showWithColor({

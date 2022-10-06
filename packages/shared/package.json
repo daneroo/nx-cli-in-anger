@@ -10,5 +10,8 @@
     "devDependencies": {
         "typescript": "4.8.2"
     },
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "music-metadata": "^8.1.0"
+    }
 }
