@@ -1,4 +1,4 @@
-# TypeSript pnpn monorepo for CLI app.
+# TypeScript pnpm monorepo for CLI app
 
 Note: *Starting over without Nx.*
 
@@ -15,6 +15,14 @@ Objectives:
   - `@root/walk` (walks a directory tree)
   - `music-metadata` (reads metadata from audio files)
   - `chalk` (coloring console output)
+
+## TODO
+
+- [ ] add tests to apps/command
+- [ ] split into apps and libs
+- [ ] top level scripts for lint/build/test all (and watch)
+- [ ] make pkg target work: [Docs](https://github.com/vercel/pkg)
+- [ ] migrate to nx! (on a branch)
 
 ## Setup
 
