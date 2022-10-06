@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "esnext",
+    "target": "esnext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "paths": {
+      "@pnpm-cli-in-anger/core": ["./packages/core"],
+      "@pnpm-cli-in-anger/components": ["./packages/components"]
+    }
+  }
+}
