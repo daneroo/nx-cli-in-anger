@@ -10,8 +10,7 @@
     "moduleResolution": "node",
     "paths": {
       "@pnpm-cli-in-anger/command": ["./packages/command"],
-      "@pnpm-cli-in-anger/core": ["./packages/core"],
-      "@pnpm-cli-in-anger/components": ["./packages/components"]
+      "@pnpm-cli-in-anger/shared": ["./packages/shared"]
     }
   }
 }
