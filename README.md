@@ -100,4 +100,4 @@ pnpm add -D typescript
   - pnpm - Performant NPM
   - ESLint - TypeScript ESLint
   - Prettier - Code formatter
-  - Jest - Testing Framework
+  - Jest - Testing Framework - Replace by Vitest

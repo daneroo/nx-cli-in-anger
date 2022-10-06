@@ -1,3 +1,6 @@
+// not sure why this is required (tsconfig?)
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { getSizeOfFile, getMeta } from './main';
 import { join } from 'path';
 import { describe, expect, it } from 'vitest';
