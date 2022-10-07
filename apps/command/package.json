@@ -13,6 +13,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "vitest run",
+    "coverage": "vitest run --coverage",
     "build": "pnpm tsc --build .",
     "start": "node dist/main.js",
     "pkg": "pnpm build && pnpm dlx pkg . -o bin/app -t node16-linux-x64,node16-macos-x64,node16-win-x64"

@@ -17,7 +17,8 @@
     "preinstall": "npx -y only-allow pnpm",
     "lint": "pnpm nx run-many --target=lint",
     "test": "pnpm nx run-many --target=test",
-    "coverage": "pnpm nx run-many --target=coverage",
+    "coverage-with-nx": "pnpm nx run-many --target=coverage",
+    "coverage": "vitest run --coverage",
     "build": "pnpm run -r build",
     "start": "node apps/command/dist/main.js -f apps/command/robert-frost-the-road-not-taken.mp3",
     "format:write": "prettier --write \"packages/**/*.ts\" \"apps/**/*.ts\""
