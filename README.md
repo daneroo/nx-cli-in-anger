@@ -18,11 +18,11 @@ Objectives:
 
 ## TODO
 
-- [ ] add tests to apps/command
-- [ ] split into apps and libs
-- [ ] top level scripts for lint/build/test all (and watch)
+- [x] add tests to apps/command
+- [x] split into apps and libs
+- [x] top level scripts for lint/build/test all (and watch)
 - [ ] make pkg target work: [Docs](https://github.com/vercel/pkg)
-- [ ] migrate to nx! (on a branch)
+- [x] migrate to nx! (on a branch)
 
 ## Setup
 
