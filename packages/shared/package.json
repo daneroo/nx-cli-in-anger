@@ -6,7 +6,6 @@
     "main": "./dist/main.js",
     "scripts": {
         "lint": "eslint .",
-        "test:watch": "vitest",
         "test": "vitest run",
         "build": "pnpm tsc --build ."
     },
