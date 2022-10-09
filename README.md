@@ -71,7 +71,6 @@ Top level directory:
   - `.eslintrc.cjs`
   - `.prettierrc`, `.prettierignore`, `.editorconfig`
 
-
 ### making an app / package
 
 ```bash
