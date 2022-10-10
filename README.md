@@ -94,6 +94,7 @@ pnpm add -D typescript
 ## References
 
 - [pnpm](https://pnpm.io/)
+- [tsconfig bases](https://github.com/tsconfig/bases)
 - [a starter](https://github.com/iyorozuya/ts-monorepo)
   - ESM - EcmaScript Modules
   - pnpm - Performant NPM

@@ -1,13 +1,11 @@
 // not sure why this is required (tsconfig?)
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-import { getSizeOfFile, getMeta } from './main';
+import { getSizeOfFile, getMeta, FileInfo } from './main.js';
 import { join } from 'path';
 import { describe, expect, it } from 'vitest';
 
 describe('getSizeOfFile', () => {
   it('should measure itself', async () => {
-    const fileInfo = await getSizeOfFile(__filename);
+    const fileInfo: FileInfo = await getSizeOfFile(__filename);
     expect(fileInfo.basename).toEqual('main.spec.ts');
     expect(fileInfo.path).toContain('lib/main.spec.ts');
     expect(fileInfo.size).toBeGreaterThan(200);

@@ -2,10 +2,23 @@ import { promises as fs } from 'node:fs';
 import { basename, dirname, resolve } from 'node:path';
 import { parseFile } from 'music-metadata';
 
+export interface FileInfo {
+  path: string;
+  basename: string;
+  dirname: string;
+  size: number;
+}
+
+export interface BasicMetadata {
+  artist: string;
+  title: string;
+  album: string;
+  duration: number;
+  bitrate: number;
+}
+
 // use node:fs to read the file size
-export async function getSizeOfFile(
-  filepath: string
-): Promise<{ path: string; basename: string; dirname: string; size: number }> {
+export async function getSizeOfFile(filepath: string): Promise<FileInfo> {
   const stats = await fs.stat(filepath);
   const absPath = resolve(filepath);
   return {
@@ -17,13 +30,7 @@ export async function getSizeOfFile(
 }
 
 // use music-metadata to get the metadata from an mp3 file
-export async function getMeta(filePath: string): Promise<{
-  artist: string;
-  title: string;
-  album: string;
-  duration: number;
-  bitrate: number;
-}> {
+export async function getMeta(filePath: string): Promise<BasicMetadata> {
   const metadata = await parseFile(filePath);
   const { artist, title, album } = metadata.common;
   const { bitrate, duration } = metadata.format;

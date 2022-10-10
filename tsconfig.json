@@ -1,15 +1,19 @@
 {
+  "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+
   "compilerOptions": {
-    "strict": true,
-    "module": "esnext",
-    "target": "esnext",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true, // (C)
     "sourceMap": true,
-    "moduleResolution": "node",
+    // below are all part of node16-strictest-esm
+    // "strict": true,
+    // "module": "ESNext",
+    // "target": "ESNext",
+    // "esModuleInterop": true,
+    // "forceConsistentCasingInFileNames": true,
+    // "skipLibCheck": true,
+    // "moduleResolution": "NodeNext",
     "paths": {
-      "@pnpm-cli-in-anger/command": ["./packages/command"],
+      "@pnpm-cli-in-anger/command": ["./apps/command"],
       "@pnpm-cli-in-anger/shared": ["./packages/shared"]
     }
   }

@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@eslint/create-config': ^0.3.1
+      '@tsconfig/node16-strictest-esm': ^1.0.3
       '@types/node': ^18.8.3
       '@typescript-eslint/eslint-plugin': ^5.39.0
       '@typescript-eslint/parser': ^5.39.0
@@ -23,6 +24,7 @@ importers:
       vitest: ^0.23.4
     devDependencies:
       '@eslint/create-config': 0.3.1
+      '@tsconfig/node16-strictest-esm': 1.0.3
       '@types/node': 18.8.3
       '@typescript-eslint/eslint-plugin': 5.39.0_xyciw6oqjoiiono4dhv3uhn5my
       '@typescript-eslint/parser': 5.39.0_ypn2ylkkyfa5i233caldtndbqa
@@ -249,6 +251,10 @@ packages:
 
   /@tsconfig/node14/1.0.3:
     resolution: {integrity: sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==}
+    dev: true
+
+  /@tsconfig/node16-strictest-esm/1.0.3:
+    resolution: {integrity: sha512-0/QTPDkKmE2dy0dMRstPCv4VJ+gUGgvMKzaWd5P3hgdlmPqYqe1pJxDGUlNYbSgUBlncIvvX+mIeZarokysNgg==}
     dev: true
 
   /@tsconfig/node16/1.0.3:

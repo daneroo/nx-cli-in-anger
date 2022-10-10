@@ -1,6 +1,4 @@
 // not sure why this is required (tsconfig?)
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { describe, expect, it } from 'vitest';
 
 describe('some-kind-of-e2e', () => {

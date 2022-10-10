@@ -2,6 +2,9 @@
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist/"
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "dist/",
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
   }
 }
