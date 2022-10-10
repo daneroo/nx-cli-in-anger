@@ -7,7 +7,7 @@ describe('getSizeOfFile', () => {
   it('should measure itself', async () => {
     const fileInfo: FileInfo = await getSizeOfFile(__filename);
     expect(fileInfo.basename).toEqual('main.spec.ts');
-    expect(fileInfo.path).toContain('lib/main.spec.ts');
+    expect(fileInfo.path).toContain('src/main.spec.ts');
     expect(fileInfo.size).toBeGreaterThan(200);
   });
 });
