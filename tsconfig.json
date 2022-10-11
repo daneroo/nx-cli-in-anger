@@ -12,8 +12,8 @@
     // "skipLibCheck": true,
     // "moduleResolution": "NodeNext",
     "paths": {
-      "@pnpm-cli-in-anger/command": ["./apps/command"],
-      "@pnpm-cli-in-anger/shared": ["./packages/shared"]
+      "@nx-cli-in-anger/command": ["./apps/command"],
+      "@nx-cli-in-anger/shared": ["./packages/shared"]
     }
   }
 }

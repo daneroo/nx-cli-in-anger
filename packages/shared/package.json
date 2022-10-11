@@ -1,5 +1,5 @@
 {
-    "name": "@pnpm-cli-in-anger/shared",
+    "name": "@nx-cli-in-anger/shared",
     "version": "1.0.0",
     "description": "Shared library",
     "type": "module",

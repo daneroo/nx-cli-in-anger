@@ -1,7 +1,7 @@
 import * as url from 'node:url';
 import yargs from 'yargs/yargs';
 import chalk from 'chalk';
-import { getSizeOfFile, getMeta } from '@pnpm-cli-in-anger/shared';
+import { getSizeOfFile, getMeta } from '@nx-cli-in-anger/shared';
 
 const defaultFilePath = 'robert-frost-the-road-not-taken.mp3';
 

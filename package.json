@@ -1,5 +1,5 @@
 {
-  "name": "pnpm-cli-in-anger",
+  "name": "nx-cli-in-anger",
   "version": "1.0.1",
   "description": "Monorepo template for typescript project with pnpm",
   "type": "module",

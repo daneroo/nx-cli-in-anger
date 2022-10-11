@@ -1,8 +1,11 @@
-# TypeScript pnpm monorepo for CLI app
-
-Note: *Starting over without Nx.*
+# nx-cli-in-anger
 
 - *use something in anger*: (humorous) to do or use something in a real situation
+
+This is a demonstration of a ESM/TypeScript pnpm monorepo for CLI app.
+
+Note: *Nx is only used for orchestration and caching*
+
 
 Objectives:
 
