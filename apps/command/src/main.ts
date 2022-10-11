@@ -1,21 +1,25 @@
+import * as url from 'node:url';
 import yargs from 'yargs/yargs';
-
 import chalk from 'chalk';
 import { getSizeOfFile, getMeta } from '@pnpm-cli-in-anger/shared';
 
 const defaultFilePath = 'robert-frost-the-road-not-taken.mp3';
 
-main()
-  .then(() => {
-    console.log('Done (without errors)');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error('Done with error:', err);
-    process.exit(1);
-  });
+// see https://exploringjs.com/nodejs-shell-scripting/ch_nodejs-path.html#detecting-if-module-is-main
+if (import.meta.url.startsWith('file:')) {
+  const modulePath = url.fileURLToPath(import.meta.url);
+  if (process.argv[1] === modulePath) {
+    try {
+      await main();
+      process.exit(0);
+    } catch (err) {
+      console.error('Done with error:', err);
+      process.exit(1);
+    }
+  }
+}
 
-async function main(): Promise<void> {
+export async function main(): Promise<void> {
   console.log('Hello node in Typescript!');
   // 1- use yargs to get the file parameter
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -41,41 +45,6 @@ async function main(): Promise<void> {
   // 4- chalk to color the output
   showWithColor({ fileInfo, meta });
 }
-
-// moved to shared
-// // use node:fs to read the file size
-// async function getSizeOfFile(
-//   filepath: string
-// ): Promise<{ path: string; basename: string; dirname: string; size: number }> {
-//   const stats = await fs.stat(filepath);
-//   return {
-//     path: filepath,
-//     basename: basename(filepath),
-//     dirname: dirname(resolve(filepath)),
-//     size: stats.size,
-//   };
-// }
-
-// moved to shared
-// // use music-metadata to get the metadata from an mp3 file
-// async function getMeta(filePath: string): Promise<{
-//   artist: string;
-//   title: string;
-//   album: string;
-//   duration: number;
-//   bitrate: number;
-// }> {
-//   const metadata = await parseFile(filePath);
-//   const { artist, title, album } = metadata.common;
-//   const { bitrate, duration } = metadata.format;
-//   return {
-//     artist: artist ?? 'unknown artist',
-//     title: title ?? 'unknown title',
-//     album: album ?? 'unknown album',
-//     duration: duration ?? 0,
-//     bitrate: bitrate ?? 0,
-//   };
-// }
 
 // chalk to color the output
 function showWithColor({

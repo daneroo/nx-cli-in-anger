@@ -1,6 +1,6 @@
 {
   "name": "pnpm-cli-in-anger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Monorepo template for typescript project with pnpm",
   "type": "module",
   "private": true,
@@ -20,7 +20,7 @@
     "coverage-with-nx": "pnpm nx run-many --target=coverage",
     "coverage": "vitest run --coverage",
     "build": "pnpm nx run-many --target=build",
-    "start": "node apps/command/dist/main.js -f apps/command/robert-frost-the-road-not-taken.mp3",
+    "start": "node apps/command/bin/command.js -f apps/command/robert-frost-the-road-not-taken.mp3",
     "format:write": "prettier --write \"packages/**/*.ts\" \"apps/**/*.ts\""
   },
   "devDependencies": {

@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "A TypeScript CLI app",
   "type": "module",
-  "main": "./dist/main.js",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": "./dist/main.js"
+  },
   "files": [
-    "dist"
+    "dist",
+    "!dist/.tsbuildinfo",
+    "bin"
   ],
   "bin": {
-    "cli": "./dist/main.js"
+    "cli-in-anger": "./bin/command.js"
   },
   "scripts": {
     "lint": "eslint .",
