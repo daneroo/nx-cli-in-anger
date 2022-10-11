@@ -4,8 +4,7 @@
 
 This is a demonstration of a ESM/TypeScript pnpm monorepo for CLI app.
 
-Note: *Nx is only used for orchestration and caching*
-
+The monorepo was structured as a pnpm workspace, and nx was added for orchestration and caching
 
 Objectives:
 
@@ -21,11 +20,7 @@ Objectives:
 
 ## TODO
 
-- [x] add tests to apps/command
-- [x] split into apps and libs
-- [x] top level scripts for lint/build/test all (and watch)
 - [ ] make pkg target work: [Docs](https://github.com/vercel/pkg)
-- [x] migrate to nx! (on a branch)
 
 ## Setup
 
