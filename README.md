@@ -23,6 +23,7 @@ Objectives:
 - [ ] Move to vite
 - [ ] Document configuration of (tsc,eslint,pnpm,nx,etc)
   - [ ] write validator for configuration properties
+- [ ] pnpm env to replace nvm?
 
 ## Setup
 
