@@ -20,7 +20,9 @@ Objectives:
 
 ## TODO
 
-- [ ] make pkg target work: [Docs](https://github.com/vercel/pkg)
+- [ ] Move to vite
+- [ ] Document configuration of (tsc,eslint,pnpm,nx,etc)
+  - [ ] write validator for configuration properties
 
 ## Setup
 
@@ -32,7 +34,7 @@ Objectives:
 
 ### pnpm and top level directory
 
-Install pnpm globally, and add 
+Install pnpm globally, and add completion
 
 ```bash
 # 0- install pnpm with corepack
