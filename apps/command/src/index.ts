@@ -5,17 +5,15 @@ import { getSizeOfFile, getMeta } from '@nx-cli-in-anger/shared';
 
 const defaultFilePath = 'robert-frost-the-road-not-taken.mp3';
 
+// we use this construction so we can import this file in tests
 // see https://exploringjs.com/nodejs-shell-scripting/ch_nodejs-path.html#detecting-if-module-is-main
 if (import.meta.url.startsWith('file:')) {
   const modulePath = url.fileURLToPath(import.meta.url);
   if (process.argv[1] === modulePath) {
-    try {
-      await main();
-      process.exit(0);
-    } catch (err) {
-      console.error('Done with error:', err);
+    main().catch((error) => {
+      console.error(error);
       process.exit(1);
-    }
+    });
   }
 }
 

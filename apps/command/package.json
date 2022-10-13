@@ -3,24 +3,20 @@
   "version": "1.0.0",
   "description": "A TypeScript CLI app",
   "type": "module",
-  "module": "./dist/main.js",
-  "types": "./dist/main.d.ts",
-  "exports": {
-    ".": "./dist/main.js"
-  },
+  "main": "index.js",
   "files": [
     "dist",
-    "!dist/.tsbuildinfo",
-    "bin"
+    "!dist/.tsbuildinfo"
   ],
   "bin": {
-    "cli-in-anger": "./bin/command.js"
+    "cli-in-anger": "index.js"
   },
   "scripts": {
     "lint": "eslint .",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
-    "build": "pnpm tsc --build .",
+    "buildTSC": "tsc --build .",
+    "build": "unbuild",
     "start": "node dist/main.js",
     "pkgNotWorking": "pnpm build && pnpm dlx pkg . -o bin/app -t node16-linux-x64,node16-macos-x64,node16-win-x64"
   },
